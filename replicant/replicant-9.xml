@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="replicant-9"
+           revision="replicant-9"
+           fetch=".." />
+
+  <project path="build/make" name="replicant-9/build_make" groups="pdk" remote="replicant-9">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="device/samsung/i9305" name="replicant-9/device_samsung_i9305" remote="replicant-9" />
+  <project path="external/mesa3d" name="replicant-9/external_mesa3d" remote="replicant-9" groups="pdk-cw-fs,pdk-fs" />
+  <project path="kernel/replicant/linux" name="replicant-9/kernel_replicant_linux" remote="replicant-9" />
+  <project path="system/core" name="replicant-9/system_core" groups="pdk" remote="replicant-9" />
+  <project path="vendor/lineage" name="replicant-9/vendor_lineage" remote="replicant-9" />
+</manifest>
