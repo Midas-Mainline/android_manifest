@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!--  <project path="build/soong" name="replicant-next/build_soong" groups="pdk,tradefed" remote="replicant" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project> -->
+  <project path="external/mesa3d" name="replicant-next/external_mesa3d" remote="replicant" groups="pdk-cw-fs,pdk-fs" />
+  <project path="device/samsung/i9305" name="replicant-next/device_samsung_i9305" remote="replicant" />
+  <project path="device/samsung/i9300" name="replicant-next/device_samsung_i9300" remote="replicant" />
+  <project path="device/samsung/midas-common" name="replicant-next/device_samsung_midas_common" remote="replicant" />
+  <project path="external/gbm_gralloc" name="robherring/gbm_gralloc" revision="cecd1a2c8504aad5ce9ad62b27f9653ca09ce9d5" remote="github" />
+  <project path="hardware/replicant/libsamsung-ipc"
+	   name="replicant/hardware_replicant_libsamsung-ipc.git"
+	   remote="replicant" revision="master" />
+  <project path="hardware/replicant/libsamsung-ril"
+	   name="replicant/hardware_replicant_libsamsung-ril.git"
+	   remote="replicant" revision="master" />
+  <project path="kernel/replicant/linux" name="replicant-next/kernel_replicant_linux" remote="replicant" />
+<!--  <project path="manifest" name="replicant-next/manifest" remote="replicant" revision="replicant-11-dev" /> -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"
+	   name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"
+	   groups="pdk,linux,arm" clone-depth="1" remote="replicant-mirrors"
+	   revision="lineage-17.1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8"
+	   name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8"
+	   groups="pdk,linux" clone-depth="1" remote="aosp"
+	   revision="refs/tags/android-10.0.0_r37" />
+  <project path="vendor/f-droid" name="replicant-next/vendor_f-droid" remote="replicant" revision="master" />
+<!--  <project path="vendor/replicant" name="replicant-next/vendor_lineage" remote="replicant" /> -->
+</manifest>
