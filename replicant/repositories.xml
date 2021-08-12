@@ -4,18 +4,29 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project> -->
-  <project path="external/mesa3d" name="replicant-next/external_mesa3d" remote="replicant" groups="pdk-cw-fs,pdk-fs" />
-  <project path="device/samsung/i9305" name="replicant-next/device_samsung_i9305" remote="replicant" />
-  <project path="device/samsung/i9300" name="replicant-next/device_samsung_i9300" remote="replicant" />
-  <project path="device/samsung/midas-common" name="replicant-next/device_samsung_midas_common" remote="replicant" />
+  <project path="external/mesa3d" name="Midas-Mainline/android_external_mesa3d" revision="lineage-18.1" remote="github" clone-depth="20" />
+
+  <project path="device/samsung/i9300" name="Midas-Mainline/android_device_samsung_i9300" remote="github" revision="replicant-11" />
+  <project path="device/samsung/midas-common" name="Midas-Mainline/android_device_midas_common" remote="github" revision="replicant-11" />
+<!--
+  <project path="external/gbm_gralloc" name="GloDroid/glodroid_forks" groups="pdk" remote="github" revision="4be2c4656c6313fa19f2f2a20e0c568d2122d851"/>
+-->
   <project path="external/gbm_gralloc" name="robherring/gbm_gralloc" revision="cecd1a2c8504aad5ce9ad62b27f9653ca09ce9d5" remote="github" />
+<!--
+  <remove-project name="platform/external/minigbm" />
+  <project path="external/minigbm" name="GloDroid/glodroid_forks" groups="pdk" remote="github" revision="8571eb8d2033d8ea925fe6a09c6266298628b1b9"/>
+
+
+  <remove-project name="platform/external/drm_hwcomposer" />
+  <project path="external/drm_hwcomposer" name="drm-hwcomposer/drm-hwcomposer" remote="freedesktop" groups="drm_hwcomposer,pdk-fs" revision="92c6a40d5240b2b58bbe9c52eb7e7a4692380ad9" /> 
+-->
   <project path="hardware/replicant/libsamsung-ipc"
 	   name="replicant/hardware_replicant_libsamsung-ipc.git"
 	   remote="replicant" revision="master" />
   <project path="hardware/replicant/libsamsung-ril"
 	   name="replicant/hardware_replicant_libsamsung-ril.git"
 	   remote="replicant" revision="master" />
-  <project path="kernel/replicant/linux" name="replicant-next/kernel_replicant_linux" remote="replicant" />
+  <project path="kernel/replicant/linux" name="Midas-Mainline/android_kernel_samsung_smdk4412" remote="github" revision="android12-5.10" />
 <!--  <project path="manifest" name="replicant-next/manifest" remote="replicant" revision="replicant-11-dev" /> -->
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"
 	   name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"
